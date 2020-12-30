@@ -27,5 +27,8 @@ while not game_over:
     sleep(0.1)
     screen.update()
     ball.move()
+    # ball's collision with top or bottom wall
+    if abs(ball.ycor()) > 280:
+        ball.bounce()
 
 screen.exitonclick()
