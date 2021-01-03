@@ -13,5 +13,8 @@ class Ball(Turtle):
         cords = self.xcor() + self.x_move, self.ycor()+ self.y_move
         self.goto(cords)
     
-    def bounce(self):
-        self.y_move *= -1 
+    def bounce_y(self):
+        self.y_move *= -1
+        
+    def bounce_x(self):
+        self.x_move *= -1
