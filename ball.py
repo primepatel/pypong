@@ -8,6 +8,7 @@ class Ball(Turtle):
         self.penup()
         self.x_move = 10
         self.y_move = 10
+        self.move_speed = 0.1
     
     def move(self):
         cords = self.xcor() + self.x_move, self.ycor()+ self.y_move
@@ -18,7 +19,9 @@ class Ball(Turtle):
         
     def bounce_x(self):
         self.x_move *= -1
+        self.move_speed *= 0.95
         
     def reset_position(self):
         self.goto(0,0)
         self.bounce_x() # to reverse direction
+        self.move_speed = 0.1 # reset move speed

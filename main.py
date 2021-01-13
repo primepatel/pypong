@@ -26,7 +26,7 @@ screen.onkey(l_paddle.go_down, "s")
 
 game_over = False
 while not game_over:
-    sleep(0.1)
+    sleep(ball.move_speed)
     screen.update()
     ball.move()
     # ball's collision with top or bottom wall
